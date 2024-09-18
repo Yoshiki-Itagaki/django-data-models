@@ -23,10 +23,6 @@ class Book(models.Model):
     
 
     def __str__(self):
-        return f"""
-            ID:{self.id}
-            {self.title} 
-            ({self.rating}), written by {self.author}, which is best-selling: {self.is_best_selling} 
-            """
+        return f"{self.title} ({self.rating})"
 
     
