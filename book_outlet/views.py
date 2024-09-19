@@ -11,7 +11,6 @@ def index(request):
     book_count = books.count()
     avg_rating = books.aggregate(Avg("rating"))
     
-    print(books)
     return render(request, "book_outlet/index.html", {
         "books": books,
         "total_number_of_books": book_count,
